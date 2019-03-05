@@ -37,7 +37,19 @@ namespace SmartShop
             TradeItemList.Add(new TradeItem(4, "Total Commander", 60, TradeItem.ProductCategory.Software));
         }
 
-        public List<TradeItem> CalculateItems(Buyer buyer, List<TradeItem> tradeItem)
+        public Dictionary<Buyer, List<TradeItem>> CalculateList()
+        {
+            Dictionary<Buyer,List<TradeItem>> calculatedItems = new Dictionary<Buyer, List<TradeItem>>();
+            foreach (var buyer in BuyersList)
+            {
+                calculatedItems.Add(buyer, CalculateItems(buyer, TradeItemList));               
+                
+            }
+            return calculatedItems;
+
+        }
+
+        private List<TradeItem> CalculateItems(Buyer buyer, List<TradeItem> tradeItem)
         {
             List<TradeItem> calculatedItems = new List<TradeItem>();
             foreach (var item in tradeItem)

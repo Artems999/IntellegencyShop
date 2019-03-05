@@ -10,24 +10,25 @@ namespace SmartShop
 {
     class Program
     {
-        
+
         static void Main(string[] args)
+        {            
+            Print();
+            Console.ReadLine();
+        }
+        public static void Print()
         {
             IntelligenceShop intelligenceShop = new IntelligenceShop();
-
-            foreach (var buyer in intelligenceShop.BuyersList)
+            Dictionary<Buyer, List<TradeItem>> calculatedItems = intelligenceShop.CalculateList();
+            foreach (var calculatedItem in calculatedItems)
             {
-                List<TradeItem> calculated = intelligenceShop.CalculateItems(buyer, intelligenceShop.TradeItemList);
-                Console.Write("{0} {1} works as a {2} and can buy: ", buyer.FirstName, buyer.LastName,buyer.PersonWorkPlace.ToString());
-                foreach (var tradeItem in calculated)
+                Console.Write("{0} {1} works as a {2} and can buy: ", calculatedItem.Key.FirstName, calculatedItem.Key.LastName, calculatedItem.Key.PersonWorkPlace);
+                foreach (var tradeItem in calculatedItem.Value)
                 {
-                    Console.Write("{0} || ", tradeItem.ItemName);
+                    Console.Write(" |{0}| ", tradeItem.ItemName);
                 }
                 Console.WriteLine();
             }
-            
-
-            Console.ReadLine();
         }
     }
 }
