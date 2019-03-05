@@ -15,10 +15,10 @@ namespace SmartShop
         {
             IntelligenceShop intelligenceShop = new IntelligenceShop();
 
-            foreach (var buer in intelligenceShop.BuyersList)
+            foreach (var buyer in intelligenceShop.BuyersList)
             {
-                List<TradeItem> calculated = intelligenceShop.CalculateItems(buer, intelligenceShop.TradeItemList);
-                Console.Write("{0} {1} works as a {2} and can buy: ", buer.FirstName, buer.LastName,buer.PersonWorkPlace.ToString());
+                List<TradeItem> calculated = intelligenceShop.CalculateItems(buyer, intelligenceShop.TradeItemList);
+                Console.Write("{0} {1} works as a {2} and can buy: ", buyer.FirstName, buyer.LastName,buyer.PersonWorkPlace.ToString());
                 foreach (var tradeItem in calculated)
                 {
                     Console.Write("{0} || ", tradeItem.ItemName);
