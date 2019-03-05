@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartShop.Trade
 {
-    class TradeItems
+    class TradeItem
     {
         public enum ProductCategory
         {
@@ -22,7 +22,7 @@ namespace SmartShop.Trade
         public ProductCategory ProdCategory { get; set; }
 
 
-        public TradeItems(int itemId, string itemName, int price, ProductCategory productCategory)
+        public TradeItem(int itemId, string itemName, int price, ProductCategory productCategory)
         {
             ItemID = itemId;
             ItemName = itemName;

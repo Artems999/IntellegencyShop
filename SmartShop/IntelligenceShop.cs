@@ -10,26 +10,46 @@ namespace SmartShop
 {
     class IntelligenceShop
     {
-        public List<Buyers> BuyersList { get; set; }
+        public List<Buyer> BuyersList { get; set; }
 
-        public List<TradeItems> TradeItemList { get; set; }
+        public List<TradeItem> TradeItemList { get; set; }
 
 
         public void CreateBuyersList()
         {
-            BuyersList.Add(new Buyers(0, "Arkadiy", "Semenov", 25, Worker.WorkPlace.Developer, 8000));
-            BuyersList.Add(new Buyers(1, "Evgeniy", "Smirnov", 25, Worker.WorkPlace.Developer, 5000));
-            BuyersList.Add(new Buyers(2, "Dmitry", "Olenichev", 25, Worker.WorkPlace.Developer, 9000));
-            BuyersList.Add(new Buyers(3, "Pavel", "Egorov", 25, Worker.WorkPlace.Developer, 7000));
+            BuyersList.Add(new Buyer(0, "Arkadiy", "Semenov", 25, Worker.WorkPlace.Developer, 8000));
+            BuyersList.Add(new Buyer(1, "Evgeniy", "Smirnov", 25, Worker.WorkPlace.SportTrainer, 5000));
+            BuyersList.Add(new Buyer(2, "Dmitry", "Olenichev", 25, Worker.WorkPlace.Designer, 9000));
         }
         public void CreateTradeItemsList()
         {
-            TradeItemList.Add(new TradeItems(0, "Milk", 60, TradeItems.ProductCategory.Products));
-            TradeItemList.Add(new TradeItems(1, "Protein", 60, TradeItems.ProductCategory.SportEat));
-            TradeItemList.Add(new TradeItems(2, "Curtains", 60, TradeItems.ProductCategory.InteriorItems));
-            TradeItemList.Add(new TradeItems(3, "Visual Studio", 60, TradeItems.ProductCategory.Software));
+            TradeItemList.Add(new TradeItem(0, "Milk", 60, TradeItem.ProductCategory.Products));
+            TradeItemList.Add(new TradeItem(1, "Protein", 600, TradeItem.ProductCategory.SportEat));
+            TradeItemList.Add(new TradeItem(2, "Curtains", 6000, TradeItem.ProductCategory.InteriorItems));
+            TradeItemList.Add(new TradeItem(3, "Visual Studio", 60, TradeItem.ProductCategory.Software));
+            TradeItemList.Add(new TradeItem(4, "Total Commander", 60, TradeItem.ProductCategory.Software));
         }
 
+      /*  public List<TradeItem> CalculateItems(Buyer buyer, List<TradeItem> tradeItem)
+        {
+            List<TradeItem> calculatedItems = new List<TradeItem>();
+            foreach (var item in tradeItem)
+            {
+                switch (buyer.PersonWorkPlace)
+                {
+                    case Worker.WorkPlace.Developer:
+                        break;
+                    case Worker.WorkPlace.Designer:
+                        break;
+                    case Worker.WorkPlace.SportTrainer:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return calculatedItems;
+        }
+        */
 
 
 

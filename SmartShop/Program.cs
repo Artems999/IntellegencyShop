@@ -12,7 +12,7 @@ namespace SmartShop
         
         static void Main(string[] args)
         {
-            Buyers myBuyer = new Buyers(0, "Arkadiy","Samsonov", 25,Worker.WorkPlace.Developer,7000);
+            Buyer myBuyer = new Buyer(0, "Arkadiy","Samsonov", 25,Worker.WorkPlace.Developer,7000);
 
 
             Console.WriteLine("FirstName: {0} LastName: {1} Age: {2} WorkPlace: {3}", myBuyer.FirstName, myBuyer.LastName, myBuyer.PersonAge, myBuyer.PersonWorkPlace.ToString());

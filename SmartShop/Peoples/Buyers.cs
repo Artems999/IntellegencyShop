@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SmartShop.Peoples
 {
-    class Buyers : Worker
+    class Buyer : Worker
     {
         public int BuyerCash { get; set; }
 
-        public Buyers(int id, string firstName, string lastName, int age, WorkPlace workPlace, int buyerCash) : base(id, firstName, lastName, age, workPlace)
+        public Buyer(int id, string firstName, string lastName, int age, WorkPlace workPlace, int buyerCash) : base(id, firstName, lastName, age, workPlace)
         {
             BuyerCash = buyerCash;
         }
