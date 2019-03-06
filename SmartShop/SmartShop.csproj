@@ -58,9 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntelligenceShop.cs" />
-    <Compile Include="Peoples\Buyers.cs" />
-    <Compile Include="Peoples\Person.cs" />
-    <Compile Include="Peoples\Worker.cs" />
+    <Compile Include="People\Buyers.cs" />
+    <Compile Include="People\BuyersFactory.cs" />
+    <Compile Include="People\Person.cs" />
+    <Compile Include="Trade\TradeItemsFactory.cs" />
+    <Compile Include="People\Worker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trade\TradeItems.cs" />

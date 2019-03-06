@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartShop.Peoples
+namespace SmartShop.People
 {
     class Worker : Person
     {
@@ -13,7 +13,6 @@ namespace SmartShop.Peoples
             Developer,
             Designer,
             SportTrainer
-
         }
 
         public WorkPlace PersonWorkPlace { get; set; }
